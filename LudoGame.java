@@ -11,7 +11,7 @@ public class LudoGame extends JFrame implements ActionListener
 	ImageIcon star,player11,player12,player13,player14,player21,player22,player23,player24,player31,player32,player33,player34,player41,player42,player43,player44;
 	ImageIcon dice,blank;
 	Timer timer;
-	ImageIcon ifirst,isecond,ithird,iforth;
+	ImageIcon ifirst,isecond,ithird,ifourth;
 	
 	private int randomnum;
 	private int moves=0;
@@ -47,7 +47,7 @@ public class LudoGame extends JFrame implements ActionListener
 	private boolean win31=false,win32=false,win33=false,win34=false;
 	
 	private boolean win41=false,win42=false,win43=false,win44=false;
-	String first="no",second="no",third="no",forth="no";
+	String first="no",second="no",third="no",fourth="no";
 	private boolean start=false;
 	private int player1xpos[]= {40, 80, 120,160,200,240,240,240,240,240,240,280,320,320,320,320,320,320,360,400,440,480,520,560,560,560,520,480,440,400,360,320,320,320,320,320,320,280,240,240,240,240,240,240,200,160,120, 80, 40,  0,  0, 40, 80,120,160,200,20};
 	private int player1ypos[]= {280,280,280,280,280,240,200,160,120,80 ,40 ,40, 40, 80, 120,160,200,240,280,280,280,280,280,280,320,360,360,360,360,360,360,400,440,480,520,560,600,600,600,560,520,480,440,400,360,360,360,360,360,360,320,320,320,320,320,320,30};
@@ -1251,9 +1251,9 @@ public class LudoGame extends JFrame implements ActionListener
 			{
 				third="player1";
 			}
-			else if(forth=="no"&&third!="player1"&&second!="player1"&&first!="player1")
+			else if(fourth=="no"&&third!="player1"&&second!="player1"&&first!="player1")
 			{
-				forth="player1";
+				fourth="player1";
 			}
 		}
 		if(win21 && win22 && win23 && win24&& player2)
@@ -1274,9 +1274,9 @@ public class LudoGame extends JFrame implements ActionListener
 			{
 				third="player2";
 			}
-			else if(forth=="no"&&third!="player2"&&second!="player2"&&first!="player2")
+			else if(fourth=="no"&&third!="player2"&&second!="player2"&&first!="player2")
 			{
-				forth="player2";
+				fourth="player2";
 			}
 			
 		}
@@ -1298,9 +1298,9 @@ public class LudoGame extends JFrame implements ActionListener
 			{
 				third="player3";
 			}
-			else if(forth=="no"&&third!="player3"&&second!="player3"&&first!="player3")
+			else if(fourth=="no"&&third!="player3"&&second!="player3"&&first!="player3")
 			{
-				forth="player3";
+				fourth="player3";
 			}
 			
 		}
@@ -1322,16 +1322,16 @@ public class LudoGame extends JFrame implements ActionListener
 			{
 				third="player4";
 			}
-			else if(forth=="no"&&third!="player4"&&second!="player4"&&first!="player4")
+			else if(fourth=="no"&&third!="player4"&&second!="player4"&&first!="player4")
 			{
-				forth="player4";
+				fourth="player4";
 			}
 			
 		}
 		ifirst=new ImageIcon("1st.png");
 		isecond=new ImageIcon("2nd.png");
 		ithird=new ImageIcon("3rd.png");
-		iforth=new ImageIcon("4th.png");
+		ifourth=new ImageIcon("4th.png");
 		if(first=="player1")
 		{
 			ifirst.paintIcon(this,g,780,50);
@@ -1344,9 +1344,9 @@ public class LudoGame extends JFrame implements ActionListener
 		{
 			ithird.paintIcon(this,g,750,10);	
 		}
-		if(forth=="player1")
+		if(fourth=="player1")
 		{
-			iforth.paintIcon(this,g,805,60);
+			ifourth.paintIcon(this,g,805,60);
 		}
 		if(first=="player2")
 		{
@@ -1360,9 +1360,9 @@ public class LudoGame extends JFrame implements ActionListener
 		{
 			ithird.paintIcon(this,g,750,10+65);	
 		}
-		if(forth=="player2")
+		if(fourth=="player2")
 		{
-			iforth.paintIcon(this,g,805,60+65);
+			ifourth.paintIcon(this,g,805,60+65);
 		}
 		if(first=="player3")
 		{
@@ -1376,9 +1376,9 @@ public class LudoGame extends JFrame implements ActionListener
 		{
 			ithird.paintIcon(this,g,750,10+130);	
 		}
-		if(forth=="player3")
+		if(fourth=="player3")
 		{
-			iforth.paintIcon(this,g,805,60+130);
+			ifourth.paintIcon(this,g,805,60+130);
 		}
 		if(first=="player4")
 		{
@@ -1392,9 +1392,9 @@ public class LudoGame extends JFrame implements ActionListener
 		{
 			ithird.paintIcon(this,g,750,10+195);	
 		}
-		if(forth=="player4")
+		if(fourth=="player4")
 		{
-			iforth.paintIcon(this,g,805,60+195);
+			ifourth.paintIcon(this,g,805,60+195);
 		}
 		g.setColor(Color.orange);
 		g.fillRect(620,380,260,40);
@@ -1466,24 +1466,24 @@ public class LudoGame extends JFrame implements ActionListener
 			runner4.setForeground(Color.black);
 		}
 
-		if(player1&&moves==0&&first!="player1" && second!="player1" &&third!="player1" && forth!="player1")
+		if(player1&&moves==0&&first!="player1" && second!="player1" &&third!="player1" && fourth!="player1")
 		{
 		
 			g.setColor(Color.black);
 			g.drawString("throw",802,107);			
 			
 		}
-		else if(player2&&moves==0 && first!="player2" && second!="player2" &&third!="player2" && forth!="player2")
+		else if(player2&&moves==0 && first!="player2" && second!="player2" &&third!="player2" && fourth!="player2")
 		{
 			g.setColor(Color.black);
 			g.drawString("throw",802,107+65);
 		}
-		else if(player3&&moves==0&&first!="player3" && second!="player3" &&third!="player3" && forth!="player3")
+		else if(player3&&moves==0&&first!="player3" && second!="player3" &&third!="player3" && fourth!="player3")
 		{
 			g.setColor(Color.black);
 			g.drawString("throw",802,107+130);
 		}
-		else if(player4&&moves==0&& first!="player4" && second!="player4" &&third!="player4" && forth!="player4")
+		else if(player4&&moves==0&& first!="player4" && second!="player4" &&third!="player4" && fourth!="player4")
 		{
 			g.setColor(Color.black);
 			g.drawString("throw",802,107+65+130);
@@ -1611,7 +1611,7 @@ public class LudoGame extends JFrame implements ActionListener
 			first="no";
 			second="no";
 			third="no";
-			forth="no";
+			fourth="no";
 			
 			
 			repaint();
